@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+    <!-- file css -->
+    <link rel="stylesheet" href="./style.css">
+    <!-- bootstrap icon -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <!-- menu -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <img src="./img/logo.png" alt="">
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                  <li class="nav-item">
+                    <a class="nav-link nav-hover" href="#">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link nav-hover" href="#">About us</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link nav-hover" href="#">Menu</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link nav-hover">Features</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link nav-hover">Contact us</a>
+                  </li>
+                </ul>
+                <button class="btn btn-web me-3" id="cart" onclick="showMyCart()" data-bs-toggle="modal" data-bs-target="#cartModal"><i class="bi bi-cart"></i></button>
+              </div>
+            </div>
+        </nav>
+        <!-- header -->
+        <header class="row mb-4">
+            <div class="info-header col-6">
+              <h2>Making time a good time by making food the good food.</h2>
+              <p>There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls with Persons but also specialized equipment,</p>
+              <button class="btn btn-web">Oder now</button>
+              <button class="btn btn-web-2">Food details</button>
+            </div>
+            <img src="./img/CSmJnTefxM 1.png" alt="" class="col-6">
+        </header>
+        <!-- features -->
+        <div class="row my-5" id="features">
+            <div class="row text-center my-3">
+                <h3 class="text-c-DC780B mb-3">FEATURES</h3>
+                <p class="fs-4">Food With A New Passion</p>
+            </div>
+            <div class="row">
+                <div class="col-4 text-center">
+                    <img src="./img/home-icon.png" alt="" class="my-3">
+                    <h4>Quality Food</h4>
+                    <p>It can be a very secure path to earn good money and make you very successful creative entrepreneur.</p>
+                </div>
+                <div class="col-4 text-center">
+                    <img src="./img//food-delivery-icon.png" alt="" class="my-3">
+                    <h4>Food Delivery</h4>
+                    <p>It can be a very secure path to earn good money and make you very successful creative entrepreneur.</p>
+                </div>
+                <div class="col-4 text-center">
+                    <img src="./img/smile-icon.png" alt="" class="my-3">
+                    <h4>Super Taste</h4>
+                    <p>It can be a very secure path to earn good money and make you very successful creative entrepreneur.</p>
+                </div>
+            </div>
+        </div>
+        <!-- about -->
+        <div id="about" class="row my-5">
+            <img src="./img/FmlS61J9LP 1.png" alt="" class="col-6 rounded-5">
+            <div class="col-6 p-5">
+                <h3 class="text-c-DC780B mb-3">ABOUT US</h3>
+                <p class="fs-2">Food Stalls with Persons but to Product marketing plane catlogues etc to.</p>
+                <p>There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls with Persons but also equipment make your marketing plane Effective.</p>
+                <button class="btn btn-web">Read more</button>
+            </div>
+        </div>
+        <!-- Menu food -->
+        <div class="row my-5">
+            <div class="row text-center my-5">
+                <h3 class="text-c-DC780B mb-3">MENU</h3>
+                <p class="fs-4">Food Full of treaty Love</p>
+                <p class="w-75" style="margin: 0 auto;">There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls with Persons but also specialized equipment, Skills to manage Customers,</p>
+            </div>
+            <ul id="food-container" class="row"></ul>
+            <button id="load-more-btn" class="btn btn-web" style="width: 120px; margin: 0 auto;" onclick="loadMore()">Learn more</button>
+            <button id="hide-btn" class="btn btn-web" style="width: 120px; margin: 0 auto; display: none;"  onclick="hideItems()">Hide</button>
+
+        </div>
+        <!-- app download -->
+        <div class="row bg-c-FBF1E7 position-relative" style="margin: 128px 0;">
+            <div class="col-6 p-5">
+                <h3 class="text-c-DC780B mb-3">TAKE AWAY</h3>
+                <p class="fs-4">Food Stalls with Persons but to Product marketing plane.</p>
+                <P>There are many things are needed to start the Fast Food Business. You need not only Just Food Stalls with Persons but also specialized equipmentwith Persons but also Just Food Stalls with Persons.</P>
+                <button class="btn btn-primary"><i class="bi bi-apple"></i>App Store</button>
+                <button class="btn btn-primary"><i class="bi bi-google-play"></i>Google Play</button>
+            </div>
+            <img src="./img/phone.png" alt="" class="position-absolute" style="width: 320px; height: 550px;top:-22%; right: 10%;;">
+        </div>
+        <!-- review -->
+        <div class="row my-5" id="review">
+            <div class="row text-center my-4">
+                <h3 class="text-c-DC780B mb-3">TESTIMONIAL</h3>
+                <p class="fs-4">Making Food great again and again</p>
+                <p class="w-75" style="margin: 0 auto;">You need not only Just Food Stalls with Persons but also specialized equipment, Skills to manage Customers, Effective Product catlogues etc to make your.</p>
+            </div>
+            <div class="row">
+                <button class="col-2 h-100 position-relative" id="prev-btn"><i class="bi bi-chevron-left"></i></button>
+                <div id="review-container" class="col-8 text-center"></div>
+                <button class="col-2 h-100 position-relative" id="next-btn"><i class="bi bi-chevron-right"></i></button>
+            </div>
+        </div>
+        <!-- contact -->
+        <div id="contact" class="row bg-c-FBF1E7">
+            <div class="row text-center my-5">
+                <h3 class="text-c-DC780B mb-3">CONTACT</h3>
+                <p class="fs-4 w-50" style="margin: 0 auto;">Food Stalls with Persons but also specialized equipment, Skills to manage.</p>
+            </div>
+            <div class="row d-flex justify-content-center mb-5">
+                <input type="text" class="float-start" style="width: 35%;height: 50px;" placeholder="Enter your message">
+                <button type="submit" class="btn btn-web" style="width: 10%;">Send</button>
+            </div>
+        </div>
+        <!-- footer -->
+        <footer class="row text-white p-5 pb-2">
+            <div class="col-3">
+                <img src="./img/logo.png" alt="">
+                <p class="mt-3 opacity-75"><a href="#">www.company name.com</a></p>
+                <p class="opacity-75"><a href="mailto:companyname@gmail.com">companyname@gmail.com</a></p>
+                <p class="opacity-75"><a href="tel:+7 485 118 03 25">Phone: +7 485-118-03-25</a></p>
+            </div>
+            <ul class="col-3" style="list-style-type: none;">
+                <li class="mb-3">Home</li>
+                <li class="mb-3 opacity-75">Landingpage</li>
+                <li class="mb-3 opacity-75">Documentation</li>
+                <li class="mb-3 opacity-75">Referral Program</li>
+                <li class="mb-3 opacity-75">UI & UX Design</li>
+                <li class="opacity-75">Web Design</li>
+            </ul>
+            <ul class="col-3" style="list-style-type: none;">
+                <li class="mb-3">Menu</li>
+                <li class="mb-3 opacity-75">Landingpage</li>
+                <li class="mb-3 opacity-75">Documentation</li>
+                <li class="mb-3 opacity-75">Referral Program</li>
+                <li class="mb-3 opacity-75">UI & UX Design</li>
+                <li class="opacity-75">Web Design</li>
+            </ul>
+            <ul class="col-3" style="list-style-type: none;">
+                <li class="mb-3">Company</li>
+                <li class="mb-3 opacity-75">Landingpage</li>
+                <li class="mb-3 opacity-75">Documentation</li>
+                <li class="mb-3 opacity-75">Referral Program</li>
+                <li class="fs-3 opacity-75">
+                    <i class="bi bi-instagram"></i>
+                    <i class="bi bi-facebook"></i>
+                    <i class="bi bi-twitter"></i>
+                    <i class="bi bi-youtube"></i>
+                </li>
+            </ul>
+        </footer>
+    </div>
+    <div class="modal fade" id="cartModal" tabindex="-1" aria-labelledby="cartModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="cartModalLabel">Shopping Cart</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body" id="cartModalBody">
+        <table class="text-center">
+            <tr>
+                <th class="px-2">STT</th>
+                <th class="px-2">Food img</th>
+                <th class="px-2">Food name</th>
+                <th class="px-2">Price</th>
+                <th class="px-2">Quantity</th>
+                <th class="px-2">Total</th>
+                <th>Action</th>
+            </tr>
+            <tbody id="mycart">
+
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td colspan="4"></td>
+                    <td colspan="2">Total Amount:</td>
+                    <td id="totalAmount"></td>
+                </tr>
+            </tfoot>
+        </table>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Checkout</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    <script src="./main.js"></script>
+</body>
+</html>
